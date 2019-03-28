@@ -6,7 +6,7 @@
   "private": true,
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "e2e": "detox test --configuration ios.sim"
+    "test": "node_modules/.bin/jest test/**/*.spec.js"
   },
   "dependencies": {
     "expo": "^32.0.0",
@@ -23,12 +23,14 @@
     "react-test-renderer": "^16.8.6"
   },
   "detox": {
+    "test-runner": "jest",
     "configurations": {
       "ios.sim": {
         "binaryPath": "bin/Exponent.app",
         "type": "ios.simulator",
         "name": "iPhone 7"
       }
-    }
+    },
+    "specs": ""
   }
 }
